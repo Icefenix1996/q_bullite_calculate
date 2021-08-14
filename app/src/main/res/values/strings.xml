@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="T1">Время начала</string>
+    <string name="Q2">Конечный обьем</string>
+    <string name="Q1">Начальный обьем</string>
+    <string name="ns">Номер скважины</string>
+    <string name="T2">Время конец</string>
+    <string name="Сщгте">Посчитать</string>
+    <string name="посчитать">count</string>
+</resources>
