@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 //Преобразуем ответ в число
                 String S = Double.toString(c);
 
-                //Выведем текст в textView
+
                 sr.setText(S);
             }
         });
