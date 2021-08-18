@@ -16,7 +16,6 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText ns, q1, q2;
     private TextView sr, T1, T2;
     private Button button;
     int t1h, t1m, t2h, t2m;
@@ -28,17 +27,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        ns  = (EditText) findViewById(R.id.ns);
-        q1 = (EditText) findViewById(R.id.Q1);
-        q2 = (EditText) findViewById(R.id.Q2);
+
         T1  = (TextView) findViewById(R.id.T1);
         sr  = (TextView) findViewById(R.id.textView);
         button = (Button) findViewById(R.id.button);
         T2  = (TextView) findViewById(R.id.T2);
-        
-        
 
-        T1.setOnClickListener(new View.OnClickListener() { // first clock  
+
+// first clock
+        T1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -61,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        T2.setOnClickListener(new View.OnClickListener() {   // 2 clock
+// second clock
+        T2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 TimePickerDialog timePickerDialog = new TimePickerDialog(
@@ -87,30 +84,29 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+// try to count but i can't
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SimpleDateFormat sdf = new SimpleDateFormat("hh-mm");
-                //Объявим числовые переменные
-                double a,b,c,x,y;
-                //Считаем с editText и editText2 текстовые значения
-                String S1 = q1.getText().toString();
-                String S2 = q2.getText().toString();
+
+
+                double c,x,y;
+
+
                 String S3 = T1.getText().toString();
                 String S4 = T2.getText().toString();
 
-                //Преобразуем текстовые переменные в числовые значения
-                a = Double.parseDouble(S1);
-                b = Double.parseDouble(S2);
+
+
                 x = Double.parseDouble(S3);
                 y = Double.parseDouble(S4);
 
-                //Проведем с числовыми переменными нужные действия
-                double time = y-x;
-                c = (b-a)/time*60*24*0.9;
 
-                //Преобразуем ответ в число
+                c = y - x;
+
+
+
                 String S = Double.toString(c);
 
 
